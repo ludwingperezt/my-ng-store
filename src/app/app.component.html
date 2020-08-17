@@ -2,3 +2,12 @@
 {{ title }}
 
 <div *ngIf="title === 'ludwing'">Este es un div</div>
+
+<button (click)="addItem()">Add item</button>
+<ul>
+    <li *ngIf="items.length === 0">La lista está vacía</li>
+    <li *ngFor="let name of items; index as i">
+        {{ i }} - {{ name }}
+        <button (click)="deleteItem(i)">X</button>
+    </li>
+</ul>
