@@ -62,4 +62,8 @@ export class AppComponent {
   deleteItem(index: number): void {
     this.items.splice(index, 1);
   }
+
+  clickProduct(id: number) {
+    console.log('product', id);
+  }
 }
