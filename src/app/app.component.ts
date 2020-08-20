@@ -55,6 +55,8 @@ export class AppComponent {
     }
   ];
 
+  power = 10;
+
   addItem(): void {
     this.items.push('nuevo item');
   }
