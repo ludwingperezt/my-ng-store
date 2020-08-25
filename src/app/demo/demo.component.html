@@ -1,0 +1,25 @@
+<input type="text" [(ngModel)]="title">
+{{ title }}
+
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
+
+<div *ngIf="title === 'ludwing'">Hola! Ludwing</div>
+<div *ngIf="title === 'juan'">Hola! Juan</div>
+<div *ngIf="title === 'homero'">Hola! Homero</div>
+
+<div [ngSwitch]="title">
+    <p *ngSwitchCase="'ludwing'">Hola! Ludwing</p>
+    <p *ngSwitchCase="'juan'">Hola! Juan</p>
+    <p *ngSwitchCase="'homero'">Hola! Homero</p>
+    <p *ngSwitchDefault>Oops! No hay match</p>
+</div>
+
+<button (click)="addItem()">Add item</button>
+<ul>
+    <li *ngIf="items.length === 0">La lista está vacía</li>
+    <li *ngFor="let name of items; index as i">
+        {{ i }} - {{ name }}
+        <button (click)="deleteItem(i)">X</button>
+    </li>
+</ul>
