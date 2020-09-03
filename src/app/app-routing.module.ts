@@ -27,6 +27,10 @@ const routes: Routes = [
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) //esto resuelve un módulo completo
       },
       {
+        path: 'about',
+        loadChildren: () => import('./about/about.module').then(m => m.AboutModule) //esto resuelve un módulo completo
+      },
+      {
         path: 'demo',
         canActivate: [AdminGuard],
         loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule) //esto resuelve un módulo completo

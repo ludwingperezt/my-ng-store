@@ -1,0 +1,13 @@
+.contact-form {
+  margin: 50px;
+  padding: 70px;
+}
+.example-full-width {
+  width: 100%;
+}
+@media screen and (max-width: 426px) {
+  .contact-form {
+    margin: 15px;
+    padding: 10px;
+  }
+}

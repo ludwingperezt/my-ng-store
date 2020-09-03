@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
 // import { SharedModule } from './../shared/shared.module';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ContactRoutingModule } from './contact-routing.module';
   imports: [
     CommonModule,
     // SharedModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+    MaterialModule,
   ]
 })
 export class ContactModule { }
