@@ -29,4 +29,35 @@ export class ProductDetailComponent implements OnInit {
       this.product = product;
     });
   }
+
+  createProduct() {
+    const newProduct: Product = {
+      id: '1234',
+      title: 'New from angular',
+      image: 'assets/images/banner-1.jpg',
+      price: 0,
+      description: 'No description'
+    };
+
+    this.productService.createProduct(newProduct).subscribe(product => {
+      console.log(product);
+    });
+  }
+
+  updateProduct() {
+    const updateProduct: Partial<Product> = {
+      price: 10000,
+      description: 'New description'
+    };
+
+    this.productService.updateProduct('1', updateProduct).subscribe(product => {
+      console.log(product);
+    });
+  }
+
+  deleteProduct() {
+    this.productService.deleteProduct('1').subscribe(res => {
+      console.log(res);
+    });
+  }
 }
