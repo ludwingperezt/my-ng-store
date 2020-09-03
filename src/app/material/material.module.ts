@@ -61,3 +61,6 @@ import { MatSortModule } from '@angular/material/sort';
   ]
 })
 export class MaterialModule { }
+export { MatTable } from '@angular/material/table';
+export { MatSort } from '@angular/material/sort';
+export { MatPaginator } from '@angular/material/paginator';

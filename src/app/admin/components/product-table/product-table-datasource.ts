@@ -1,8 +1,10 @@
 import { DataSource } from '@angular/cdk/collections';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+// import { MatPaginator } from '@angular/material/paginator';
+// import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { MatPaginator } from '../../../material/material.module';
+import { MatSort } from '../../../material/material.module';
 
 // TODO: Replace this with your own data model type
 export interface ProductTableItem {

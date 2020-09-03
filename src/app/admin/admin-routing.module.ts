@@ -11,7 +11,7 @@ const routes: Routes = [
     component: NavComponent,
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent
       },
       {
