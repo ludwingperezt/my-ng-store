@@ -23,6 +23,10 @@ const routes: Routes = [
         loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) //esto resuelve un módulo completo
       },
       {
+        path: 'order',
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule) //esto resuelve un módulo completo
+      },
+      {
         path: 'contact',
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) //esto resuelve un módulo completo
       },
